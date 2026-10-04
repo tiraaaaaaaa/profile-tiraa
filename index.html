@@ -3,123 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTS Teknologi Web - Anggun Tira Azzahra</title>
+    <title>Profil UTS Web - Anggun Tira Azzahra</title>
+    <!-- Font dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ikon dari FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            /* Latar belakang gradien agar lebih menarik */
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
             color: #333;
             line-height: 1.6;
-            margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        .resume-wrapper {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            display: flex;
+            overflow: hidden;
+            min-height: 80vh;
         }
-        header {
+        /* Bagian Sidebar Kiri */
+        .sidebar {
+            background-color: #2c3e50;
+            color: #fff;
+            width: 35%;
+            padding: 40px 30px;
+        }
+        .profile-img-container {
             text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 20px;
             margin-bottom: 30px;
         }
-        header h1 {
-            color: #2c3e50;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #34495e;
+            border: 4px solid #3498db;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #ecf0f1;
+        }
+        .sidebar h1 {
+            font-size: 1.8rem;
+            text-align: center;
             margin-bottom: 5px;
-            font-size: 2.2em;
+            color: #ecf0f1;
         }
-        header p {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin: 0;
+        .sidebar h2 {
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 400;
+            color: #3498db;
+            margin-bottom: 30px;
         }
-        h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 8px;
-            margin-top: 35px;
-            font-size: 1.4em;
+        .info-section {
+            margin-bottom: 30px;
         }
-        .grid-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        .info-box {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-        }
-        .info-label {
-            font-size: 0.9em;
-            color: #7f8c8d;
+        .sidebar-title {
+            font-size: 1.2rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 3px;
+            letter-spacing: 1px;
         }
-        .info-value {
-            font-size: 1.1em;
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .info-item i {
+            width: 30px;
+            color: #3498db;
+            font-size: 1.2rem;
+        }
+        .info-item p {
+            margin: 0;
+            color: #ecf0f1;
+        }
+        
+        /* Bagian Konten Kanan */
+        .main-content {
+            width: 65%;
+            padding: 50px 40px;
+            background-color: #fafbfc;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .section-title {
+            font-size: 1.4rem;
             color: #2c3e50;
-            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        .section-title i {
+            color: #3498db;
+            margin-right: 12px;
+            background: #e1f0fa;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.1rem;
         }
         .text-box {
-            background: #f8fafc;
-            padding: 20px;
+            background: #fff;
+            padding: 25px;
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
             border-left: 4px solid #3498db;
+            text-align: justify;
+            font-size: 1.05rem;
+            color: #555;
+            transition: transform 0.3s ease;
         }
-        @media (max-width: 600px) {
-            .grid-info { grid-template-columns: 1fr; }
+        .text-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+        
+        /* Responsif */
+        @media (max-width: 768px) {
+            .resume-wrapper {
+                flex-direction: column;
+            }
+            .sidebar, .main-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Bagian Header Profil -->
-        <header>
+    <div class="resume-wrapper">
+        
+        <!-- SIDEBAR KIRI (Data Diri & Profil) -->
+        <div class="sidebar">
+            <div class="profile-img-container">
+                <div class="profile-img">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+            </div>
+            
             <h1>Anggun Tira Azzahra</h1>
-            <p>Mahasiswa Teknik Komputer - Universitas Negeri Semarang</p>
-        </header>
+            <h2>Mahasiswa Teknik Komputer</h2>
 
-        <!-- Bagian Biodata Singkat -->
-        <h2>Informasi Pribadi</h2>
-        <div class="grid-info">
-            <div class="info-box">
-                <div class="info-label">NIM</div>
-                <div class="info-value">2405110039</div>
+            <div class="info-section">
+                <h3 class="sidebar-title">Informasi Pribadi</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-id-card"></i>
+                    <p>NIM: 2405110039</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Angkatan: 2024</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-university"></i>
+                    <p>Universitas Negeri Semarang</p>
+                </div>
             </div>
-            <div class="info-box">
-                <div class="info-label">Program Studi</div>
-                <div class="info-value">Teknik Komputer</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label">Tahun Angkatan</div>
-                <div class="info-value">2024</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label">Cita-cita Utama</div>
-                <div class="info-value">Web & IoT Developer</div>
+
+            <div class="info-section">
+                <h3 class="sidebar-title">Kontak</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p style="font-size: 0.85rem;">angguntiraaa@students.unnes.ac.id</p>
+                </div>
             </div>
         </div>
 
-        <!-- Bagian Kesibukan -->
-        <h2>Kesibukan Selain Kuliah</h2>
-        <div class="text-box">
-            <p>Saat ini saya aktif sebagai panitia (divisi acara) untuk <em>IT event</em> DevXperience 2026 yang diselenggarakan bersama UKM RIPTEK / Codelines. Selain kegiatan kepanitiaan, saya juga sedang fokus mengerjakan beberapa proyek pengembangan, di antaranya adalah perancangan UI/UX dan arsitektur aplikasi mobile "Anjem Kampus", serta proyek pembuatan website profil resmi untuk SMP N 1 Japah.</p>
-        </div>
+        <!-- KONTEN KANAN (Menjawab Syarat UTS) -->
+        <div class="main-content">
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fa-solid fa-calendar-check"></i> Kesibukan Selain Kuliah</h2>
+                <div class="text-box">
+                    Saat ini saya aktif sebagai panitia (Divisi Acara) untuk <em>IT event</em> kampus DevXperience 2026 yang diselenggarakan bersama UKM RIPTEK / Codelines. Di samping kegiatan kepanitiaan, saya sedang mengerjakan proyek perancangan arsitektur aplikasi mobile dan UI/UX untuk aplikasi "Anjem", Untuk matakuliah Mobile Computing.
+                </div>
+            </div>
 
-        <!-- Bagian Cita-cita dan Bidang IT -->
-        <h2>Bidang IT yang Ingin Didalami</h2>
-        <div class="text-box">
-            <p>Saya memiliki ketertarikan kuat untuk menjadi ahli di bidang <strong>Web Development</strong> dan <strong>Internet of Things (IoT)</strong>. Fokus utama saya adalah mempelajari bagaimana mengintegrasikan perangkat mikrokontroler (seperti Arduino Uno dan ESP32) dengan teknologi website. Tujuannya adalah untuk menciptakan sistem otomasi dan monitoring yang cerdas yang antarmukanya dapat diakses dan dikontrol secara <em>real-time</em> melalui <em>browser</em>.</p>
-        </div>
+            <div class="section">
+                <h2 class="section-title"><i class="fa-solid fa-rocket"></i> Cita-cita</h2>
+                <div class="text-box">
+                    Bercita-cita menjadi seorang Web Developer yang andal. Saya ingin bisa membangun website dan aplikasi yang tidak hanya memiliki tampilan menarik (UI/UX), tetapi juga fungsional dan bermanfaat untuk menyelesaikan permasalahan di masyarakat.
+                </div>
+            </div>
 
+            <div class="section">
+                <h2 class="section-title"><i class="fa-solid fa-microchip"></i> Bidang IT yang Ingin Didalami (Expert)</h2>
+                <div class="text-box">
+                    Saya ingin menjadi <em>expert</em> di bidang Internet of Things (IoT) dan Web Development. Secara khusus, fokus saya adalah menguasai cara mengintegrasikan mikrokontroler (seperti Arduino Uno dan ESP32) dengan teknologi website. Dengan begitu, saya dapat merancang sistem pemantauan dan kontrol perangkat keras yang bisa diakses secara langsung melalui halaman web.
+                </div>
+            </div>
+
+        </div>
     </div>
 
 </body>
