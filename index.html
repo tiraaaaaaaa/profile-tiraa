@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Teknologi Web - Anggun Tira Azzahra</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 2.2em;
+        }
+        header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            font-size: 1.4em;
+        }
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .info-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .info-label {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        .info-value {
+            font-size: 1.1em;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .text-box {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 600px) {
+            .grid-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Header Profil -->
+        <header>
+            <h1>Anggun Tira Azzahra</h1>
+            <p>Mahasiswa Teknik Komputer - Universitas Negeri Semarang</p>
+        </header>
+
+        <!-- Bagian Biodata Singkat -->
+        <h2>Informasi Pribadi</h2>
+        <div class="grid-info">
+            <div class="info-box">
+                <div class="info-label">NIM</div>
+                <div class="info-value">2405110039</div>
+            </div>
+            <div class="info-box">
+                <div class="info-label">Program Studi</div>
+                <div class="info-value">Teknik Komputer</div>
+            </div>
+            <div class="info-box">
+                <div class="info-label">Tahun Angkatan</div>
+                <div class="info-value">2024</div>
+            </div>
+            <div class="info-box">
+                <div class="info-label">Cita-cita Utama</div>
+                <div class="info-value">Web & IoT Developer</div>
+            </div>
+        </div>
+
+        <!-- Bagian Kesibukan -->
+        <h2>Kesibukan Selain Kuliah</h2>
+        <div class="text-box">
+            <p>Saat ini saya aktif sebagai panitia (divisi acara) untuk <em>IT event</em> DevXperience 2026 yang diselenggarakan bersama UKM RIPTEK / Codelines. Selain kegiatan kepanitiaan, saya juga sedang fokus mengerjakan beberapa proyek pengembangan, di antaranya adalah perancangan UI/UX dan arsitektur aplikasi mobile "Anjem Kampus", serta proyek pembuatan website profil resmi untuk SMP N 1 Japah.</p>
+        </div>
+
+        <!-- Bagian Cita-cita dan Bidang IT -->
+        <h2>Bidang IT yang Ingin Didalami</h2>
+        <div class="text-box">
+            <p>Saya memiliki ketertarikan kuat untuk menjadi ahli di bidang <strong>Web Development</strong> dan <strong>Internet of Things (IoT)</strong>. Fokus utama saya adalah mempelajari bagaimana mengintegrasikan perangkat mikrokontroler (seperti Arduino Uno dan ESP32) dengan teknologi website. Tujuannya adalah untuk menciptakan sistem otomasi dan monitoring yang cerdas yang antarmukanya dapat diakses dan dikontrol secara <em>real-time</em> melalui <em>browser</em>.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
